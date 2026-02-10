@@ -90,9 +90,9 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="badge">Why Choose Us</div>
-                    <h2 className="section-title">We Don't Just Market Brands,<br />We Build Success Stories</h2>
+                    <h2 className="section-title">We Don&apos;t Just Market Brands,<br />We Build Success Stories</h2>
                     <p className="section-description">
-                        India's best digital agency for growing businesses. We combine creativity,
+                        India&apos;s best digital agency for growing businesses. We combine creativity,
                         technology, and strategy to deliver exceptional results.
                     </p>
                 </motion.div>

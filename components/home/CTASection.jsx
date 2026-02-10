@@ -47,7 +47,7 @@ export default function CTASection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        Let's Build Something <span className="highlight">Amazing</span> Together
+                        Let&apos;s Build Something <span className="highlight">Amazing</span> Together
                     </motion.h2>
 
                     {/* Description */}

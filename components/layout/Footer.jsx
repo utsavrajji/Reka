@@ -114,7 +114,7 @@ export default function Footer() {
                             <span className="logo-accent">Creative Labs</span>
                         </div>
                         <p className="footer-description">
-                            Building brands. Crafting code. Driving growth. We're your partner in digital transformation.
+                            Building brands. Crafting code. Driving growth. We&apos;re your partner in digital transformation.
                         </p>
                         <div className="social-links">
                             {socialLinks.map((social) => (

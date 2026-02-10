@@ -48,6 +48,7 @@ export default function CometCardDemo() {
                             onClick={() => openModal(founder)}
                         >
                             <div className="card-profile-section">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={founder.profileImage}
                                     alt={founder.name}
@@ -72,6 +73,7 @@ export default function CometCardDemo() {
                         </button>
                         <div className="modal-header">
                             <div className="modal-image-wrapper">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={selectedFounder.profileImage}
                                     alt={selectedFounder.name}

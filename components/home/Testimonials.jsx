@@ -78,7 +78,7 @@ export default function Testimonials() {
                     <div className="badge">Client Success Stories</div>
                     <h2>What Our Clients Say</h2>
                     <p className="section-description">
-                        Don't just take our word for it. Hear from the businesses we've helped grow.
+                        Don&apos;t just take our word for it. Hear from the businesses we&apos;ve helped grow.
                     </p>
                 </motion.div>
 

@@ -59,9 +59,9 @@ export default function Contact() {
                 <section className="contact-hero section">
                     <div className="container text-center">
                         <div className="badge">Get in Touch</div>
-                        <h1>Let's Talk About Your Project</h1>
+                        <h1>Let&apos;s Talk About Your Project</h1>
                         <p className="hero-description">
-                            Ready to grow your business? We're here to help. Get a free consultation today.
+                            Ready to grow your business? We&apos;re here to help. Get a free consultation today.
                         </p>
                     </div>
                 </section>
@@ -72,7 +72,7 @@ export default function Contact() {
                             <div className="contact-info-section">
                                 <h2>Contact Information</h2>
                                 <p className="contact-intro">
-                                    Feel free to reach out to us through any of these channels. We're always happy to discuss your project.
+                                    Feel free to reach out to us through any of these channels. We&apos;re always happy to discuss your project.
                                 </p>
 
                                 <div className="contact-methods">
@@ -160,7 +160,7 @@ export default function Contact() {
                                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                                             <polyline points="22 4 12 14.01 9 11.01" />
                                         </svg>
-                                        <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                                        <p>Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                                     </div>
                                 )}
                                 {error && (

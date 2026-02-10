@@ -40,7 +40,7 @@ export default function ServicesPreview() {
             <div className="container">
                 <div className="section-header text-center">
                     <div className="badge">Our Services</div>
-                    <h2>India's Best Digital Agency for Growth, Creativity, and Results</h2>
+                    <h2>India&apos;s Best Digital Agency for Growth, Creativity, and Results</h2>
                     <p className="section-description">
                         We offer comprehensive digital solutions to help your business thrive in the digital landscape.
                     </p>

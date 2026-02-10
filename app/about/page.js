@@ -21,7 +21,7 @@ export default function About() {
                             <div className="badge">About Us</div>
                             <h1>We Build Success Stories, Not Just Websites</h1>
                             <p className="hero-description">
-                                Reka Creative Labs is more than a digital agency—we're your growth partner in the digital landscape.
+                                Reka Creative Labs is more than a digital agency—we&apos;re your growth partner in the digital landscape.
                             </p>
                         </div>
                     </div>
@@ -42,10 +42,10 @@ export default function About() {
                             <BookIcon className="story-icon" size={48} />
                             <h2>Our Story</h2>
                             <p className="story-text">
-                                Founded with a vision to help businesses thrive in the digital age, Reka Creative Labs has grown into one of India's most trusted digital agencies. We started with a simple belief: great design and smart technology can transform businesses.
+                                Founded with a vision to help businesses thrive in the digital age, Reka Creative Labs has grown into one of India&apos;s most trusted digital agencies. We started with a simple belief: great design and smart technology can transform businesses.
                             </p>
                             <p className="story-text">
-                                Today, we've helped over <span className="highlight-stat">50+ businesses</span> achieve their digital goals, from startups taking their first steps online to established brands looking to scale their digital presence.
+                                Today, we&apos;ve helped over <span className="highlight-stat">50+ businesses</span> achieve their digital goals, from startups taking their first steps online to established brands looking to scale their digital presence.
                             </p>
                         </div>
                     </div>
@@ -75,11 +75,11 @@ export default function About() {
                                 <ul className="philosophy-list">
                                     <li>
                                         <XCircleIcon className="icon-cross" size={20} />
-                                        <span>Beautiful websites that don't convert</span>
+                                        <span>Beautiful websites that don&apos;t convert</span>
                                     </li>
                                     <li>
                                         <XCircleIcon className="icon-cross" size={20} />
-                                        <span>Social media that doesn't grow</span>
+                                        <span>Social media that doesn&apos;t grow</span>
                                     </li>
                                     <li>
                                         <XCircleIcon className="icon-cross" size={20} />
@@ -169,7 +169,7 @@ export default function About() {
                     <div className="container text-center">
                         <h2>Ready to Work Together?</h2>
                         <p style={{ fontSize: 'var(--font-size-lg)', marginBottom: 'var(--spacing-xl)' }}>
-                            Let's discuss how we can help your business grow.
+                            Let&apos;s discuss how we can help your business grow.
                         </p>
                         <a href="/contact" className="btn btn-primary btn-lg">
                             Get in Touch

@@ -228,7 +228,7 @@ export default function Services() {
                     <div className="container text-center">
                         <h2>Ready to Get Started?</h2>
                         <p style={{ fontSize: 'var(--font-size-lg)', marginBottom: 'var(--spacing-xl)', color: 'var(--dark-text-secondary)' }}>
-                            Let's discuss which services are right for your business.
+                            Let&apos;s discuss which services are right for your business.
                         </p>
                         <a href="/contact" className="btn btn-primary btn-lg">
                             Request a Consultation

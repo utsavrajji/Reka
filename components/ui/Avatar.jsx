@@ -11,6 +11,7 @@ export function Avatar({ className = '', children, ...props }) {
 
 export function AvatarImage({ className = '', src, alt, ...props }) {
     return (
+        /* eslint-disable-next-line @next/next/no-img-element */
         <img
             src={src}
             alt={alt}

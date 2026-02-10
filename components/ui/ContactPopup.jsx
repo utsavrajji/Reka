@@ -112,7 +112,7 @@ export default function ContactPopup() {
                         <div className="popup-header">
                             <div className="popup-badge">💬 Get in Touch</div>
                             <h2>Send Us a Message</h2>
-                            <p>We'd love to hear from you! Fill out the form below.</p>
+                            <p>We&apos;d love to hear from you! Fill out the form below.</p>
                         </div>
 
                         {/* Form */}
@@ -175,7 +175,7 @@ export default function ContactPopup() {
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                 >
-                                    ✅ Message sent successfully! We'll get back to you soon.
+                                    ✅ Message sent successfully! We&apos;ll get back to you soon.
                                 </motion.div>
                             )}
 
