@@ -59,6 +59,11 @@ export default function PricingCard({ plan }) {
 
             const data = await response.json();
 
+            if (!response.ok) {
+                console.error("Server Error Data:", data);
+                throw new Error(data.error || data.message || "Failed to create order");
+            }
+
             if (data.payment_session_id) {
                 // Open Checkout
                 await cashfree.checkout({
@@ -67,12 +72,13 @@ export default function PricingCard({ plan }) {
                     redirectTarget: "_self" // or "_blank", "_top"
                 });
             } else {
-                alert('Failed to initiate payment. Please try again.');
+                console.error("No Session ID received:", data);
+                alert('Failed to initiate payment. Session ID missing.');
             }
 
         } catch (error) {
             console.error("Payment error:", error);
-            alert('Something went wrong. Please try again.');
+            alert(`Payment Error: ${error.message}`);
         } finally {
             setLoading(false);
         }
