@@ -51,7 +51,7 @@ export async function POST(request) {
             // Replace localhost with your production domain if possible, or use a placeholder
             // For now, we'll try to just upgrade protocol, but localhost doesn't support https usually without setup.
             // BETTER: Use the actual domain if known.
-            returnUrl = `https://rekaresearch.com/payment-status?order_id=${orderId}`;
+            returnUrl = `https://rekacreativelabs.com/payment-status?order_id=${orderId}`;
             console.log("Forcing HTTPS return_url for Production Mode on Local:", returnUrl);
         }
 
