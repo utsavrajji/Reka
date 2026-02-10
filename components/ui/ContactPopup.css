@@ -1,0 +1,302 @@
+/* Contact Popup Styles */
+
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 25, 18, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 9998;
+}
+
+.contact-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+    max-width: 420px;
+    width: 85%;
+    max-height: 85vh;
+    overflow-y: auto;
+    z-index: 9999;
+    padding: 1.75rem;
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(140, 246, 101, 0.1);
+    border: 1px solid rgba(140, 246, 101, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    color: var(--dark-green);
+}
+
+.popup-close:hover {
+    background: rgba(140, 246, 101, 0.2);
+    border-color: var(--light-green);
+    transform: rotate(90deg);
+}
+
+/* Header */
+.popup-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.popup-badge {
+    display: inline-block;
+    padding: 0.4rem 0.875rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(140, 246, 101, 0.5);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0A1912;
+    /* Dark green for better contrast */
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-header h2 {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin: 0 0 0.4rem 0;
+}
+
+.popup-header p {
+    color: var(--dark-text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Form */
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem 0.875rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-lg);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all var(--transition-base);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--dark-green);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(140, 246, 101, 0.2);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Messages */
+.popup-success {
+    padding: 1rem;
+    background: rgba(140, 246, 101, 0.1);
+    border: 1px solid rgba(140, 246, 101, 0.3);
+    border-radius: var(--radius-lg);
+    color: var(--primary-green);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+}
+
+.popup-error {
+    padding: 1rem;
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    border-radius: var(--radius-lg);
+    color: #c41e3a;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Submit Button */
+.popup-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-green) 0%, #038A4A 100%);
+    color: var(--white);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(3, 106, 58, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.popup-submit-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.popup-submit-btn:hover::before {
+    opacity: 1;
+}
+
+.popup-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 106, 58, 0.4);
+}
+
+.popup-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.popup-submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-arrow {
+    transition: transform var(--transition-base);
+}
+
+.popup-submit-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Spinner */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scrollbar */
+.contact-popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contact-popup::-webkit-scrollbar-track {
+    background: rgba(140, 246, 101, 0.05);
+    border-radius: 10px;
+}
+
+.contact-popup::-webkit-scrollbar-thumb {
+    background: rgba(140, 246, 101, 0.3);
+    border-radius: 10px;
+}
+
+.contact-popup::-webkit-scrollbar-thumb:hover {
+    background: rgba(140, 246, 101, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-popup {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 85vh;
+    }
+
+    .popup-header h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .popup-close {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-popup {
+        padding: 1.25rem;
+    }
+
+    .popup-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .popup-form {
+        gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem;
+        font-size: var(--font-size-sm);
+    }
+
+    .popup-submit-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Animation */
+@media (prefers-reduced-motion: reduce) {
+
+    .popup-backdrop,
+    .contact-popup,
+    .popup-close,
+    .popup-submit-btn {
+        transition: none;
+        animation: none;
+    }
+}

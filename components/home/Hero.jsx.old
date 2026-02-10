@@ -1,0 +1,54 @@
+import './Hero.css';
+
+export default function Hero() {
+    return (
+        <section className="hero">
+            <div className="container">
+                <div className="hero-content">
+                    <div className="hero-text">
+                        <div className="badge fade-in">⭐ Rated 4.6 Stars by Clients</div>
+                        <h1 className="hero-title slide-in-left">
+                            Building Brands.<br />
+                            Crafting Code.<br />
+                            <span className="text-primary">Driving Growth.</span>
+                        </h1>
+                        <p className="hero-description slide-in-left">
+                            India's best digital agency for growth, creativity, and results. We transform businesses through innovative web design, strategic digital marketing, and creative solutions that drive real growth.
+                        </p>
+                        <div className="hero-buttons slide-in-left">
+                            <a href="/contact" className="btn btn-primary btn-lg">
+                                Get a Free Consultation
+                            </a>
+                            <a href="/services" className="btn btn-outline btn-lg">
+                                View Our Services
+                            </a>
+                        </div>
+                    </div>
+                    <div className="hero-visual slide-in-right">
+                        <div className="floating-card card-1">
+                            <div className="card-icon">🚀</div>
+                            <div className="card-text">
+                                <h4>100+</h4>
+                                <p>Projects Completed</p>
+                            </div>
+                        </div>
+                        <div className="floating-card card-2">
+                            <div className="card-icon">⭐</div>
+                            <div className="card-text">
+                                <h4>4.6/5</h4>
+                                <p>Client Rating</p>
+                            </div>
+                        </div>
+                        <div className="floating-card card-3">
+                            <div className="card-icon">💼</div>
+                            <div className="card-text">
+                                <h4>50+</h4>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

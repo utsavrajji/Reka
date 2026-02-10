@@ -1,0 +1,140 @@
+.hero {
+    background: var(--gradient-hero);
+    padding: var(--spacing-3xl) 0;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.hero-title {
+    font-size: var(--font-size-6xl);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    color: rgba(10, 25, 18, 0.8);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.hero-visual {
+    position: relative;
+    height: 500px;
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-card.card-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-card.card-2 {
+    top: 45%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.floating-card.card-3 {
+    bottom: 15%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-text h4 {
+    margin: 0;
+    font-size: var(--font-size-2xl);
+    color: var(--primary-green);
+}
+
+.card-text p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: rgba(10, 25, 18, 0.7);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-visual {
+        height: 300px;
+        margin-top: var(--spacing-lg);
+    }
+
+    .floating-card {
+        padding: var(--spacing-md);
+    }
+
+    .card-icon {
+        font-size: 1.5rem;
+    }
+
+    .card-text h4 {
+        font-size: var(--font-size-lg);
+    }
+}

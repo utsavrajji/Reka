@@ -1,0 +1,293 @@
+/* CometCard Demo Styles */
+
+.comet-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.comet-cards-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.comet-demo-button {
+    margin: 1rem auto;
+    display: flex;
+    width: 200px;
+    max-width: 90vw;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 16px;
+    border: 0;
+    background-color: #1F2121;
+    padding: 0.5rem;
+    transform-style: preserve-3d;
+    transform: none;
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .comet-demo-button {
+        margin: 1rem auto;
+        padding: 0.75rem;
+    }
+}
+
+.card-profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex: 1;
+}
+
+.card-profile-image {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 3/4;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 2px solid rgba(140, 246, 101, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comet-demo-button:hover .card-profile-image {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(140, 246, 101, 0.2);
+}
+
+.comet-demo-content {
+    margin: 0 0.5rem;
+    flex: 1;
+}
+
+.comet-demo-image-wrapper {
+    position: relative;
+    margin-top: 0.5rem;
+    aspect-ratio: 3/4;
+    width: 100%;
+}
+
+.comet-demo-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #000000;
+    object-fit: cover;
+    filter: contrast(0.75);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 6px 0px;
+    opacity: 1;
+}
+
+.comet-demo-footer {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+
+.comet-demo-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--light-green);
+    margin-bottom: 0.25rem;
+}
+
+.comet-demo-title {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.comet-demo-id {
+    font-size: 0.75rem;
+    color: rgb(209, 213, 219);
+    opacity: 0.5;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 25, 18, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: rgba(31, 33, 33, 0.95);
+    border: 1px solid rgba(140, 246, 101, 0.2);
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(140, 246, 101, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--light-green);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(140, 246, 101, 0.2);
+    border-color: var(--light-green);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.modal-image-wrapper {
+    flex-shrink: 0;
+    width: 120px;
+    aspect-ratio: 3/4;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(140, 246, 101, 0.3);
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(0.9);
+}
+
+.modal-title-section {
+    flex: 1;
+}
+
+.modal-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-title {
+    font-size: 1rem;
+    color: var(--light-green);
+    margin: 0;
+    font-weight: 500;
+}
+
+.modal-body {
+    color: var(--dark-text-secondary);
+    line-height: 1.8;
+}
+
+.modal-bio {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.modal-experience {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--dark-text-secondary);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1.5rem;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-image-wrapper {
+        width: 100px;
+        aspect-ratio: 3/4;
+        height: auto;
+    }
+
+    .modal-name {
+        font-size: 1.5rem;
+    }
+
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
+    }
+}

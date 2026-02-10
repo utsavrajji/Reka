@@ -1,0 +1,23 @@
+/* CometCard Component Styles */
+
+.comet-perspective {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.comet-card-wrapper {
+    position: relative;
+    border-radius: 16px;
+    transform-style: preserve-3d;
+}
+
+.comet-glare {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    mix-blend-mode: overlay;
+}

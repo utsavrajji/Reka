@@ -1,0 +1,329 @@
+/* Horizon Hero Section - 3D Cosmic Experience */
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    /* Extended for scroll sections */
+}
+
+.hero-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 1.75rem;
+    height: 2px;
+    background-color: var(--white);
+    transition: all var(--transition-base);
+}
+
+.menu-icon:hover span {
+    background-color: var(--light-green);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+/* Main Content */
+.hero-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    max-width: 90%;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 900;
+    color: #a87d09;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 30px rgba(255, 216, 106, 0.5),
+        0 0 60px rgba(255, 216, 106, 0.3);
+    line-height: 1;
+}
+
+.hero-subtitle {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+}
+
+.subtitle-line {
+    margin: 0.5rem 0;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.scroll-text {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+}
+
+.progress-track {
+    width: 6rem;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+    transition: width 0.3s ease-out;
+    box-shadow: 0 0 10px var(--light-green);
+}
+
+.section-counter {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    opacity: 0.9;
+}
+
+/* Scroll Sections */
+.scroll-sections {
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.content-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    max-width: 90%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .side-menu {
+        display: none;
+        /* Hide on mobile for cleaner view */
+    }
+
+    .hero-container {
+        height: 200vh;
+        /* Reduced for mobile */
+    }
+
+    .hero-canvas {
+        opacity: 0.7;
+        /* Reduce 3D intensity */
+    }
+
+    .menu-icon span {
+        width: 1.25rem;
+    }
+
+    .vertical-text {
+        font-size: 0.625rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 15vw, 5rem);
+        letter-spacing: 0.3rem;
+        text-shadow: 0 0 40px rgba(168, 125, 9, 0.8),
+            0 0 80px rgba(168, 125, 9, 0.5),
+            0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 4vw, 1.25rem);
+        margin-top: 1.5rem;
+        letter-spacing: 0.05rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        line-height: 1.6;
+    }
+
+    .scroll-progress {
+        bottom: 2rem;
+        right: 1.5rem;
+        gap: 0.75rem;
+    }
+
+    .progress-track {
+        width: 4rem;
+    }
+
+    .scroll-text {
+        font-size: 0.625rem;
+    }
+
+    .section-counter {
+        font-size: 0.75rem;
+    }
+
+    .content-section {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        height: 150vh;
+        /* Even shorter for small phones */
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 12vw, 3.5rem);
+        letter-spacing: 0.2rem;
+        text-shadow: 0 0 30px rgba(168, 125, 9, 0.9),
+            0 0 60px rgba(168, 125, 9, 0.6),
+            0 4px 15px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        margin-top: 1rem;
+    }
+
+    .scroll-progress {
+        bottom: 1.5rem;
+        right: 1rem;
+        scale: 0.8;
+    }
+}
+
+/* Tablet landscape orientation */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+}
+
+/* High resolution displays */
+@media (min-width: 1920px) {
+    .hero-title {
+        font-size: 10rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+
+    .scroll-progress {
+        bottom: 4rem;
+        right: 4rem;
+    }
+
+    .side-menu {
+        left: 3rem;
+    }
+}
+
+/* Accessibility - Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-canvas {
+        animation: none;
+    }
+
+    .progress-fill {
+        transition: none;
+    }
+
+    .menu-icon span {
+        transition: none;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .hero-canvas,
+    .side-menu,
+    .scroll-progress {
+        display: none;
+    }
+
+    .hero-container {
+        height: auto;
+    }
+
+    .hero-content {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+    }
+
+    .hero-title {
+        color: var(--dark-green);
+        text-shadow: none;
+    }
+
+    .hero-subtitle {
+        color: var(--dark-green);
+    }
+}
