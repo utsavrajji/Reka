@@ -5,6 +5,9 @@ export const metadata = {
     title: 'Reka Creative Labs - Digital Agency for Growth & Innovation',
     description: 'Reka Creative Labs offers cutting-edge digital solutions, specializing in web design, digital marketing, branding, and business growth. Transform your brand with our creative expertise.',
     keywords: 'digital agency, web design, digital marketing, branding, SEO, social media marketing, video editing, business growth',
+    icons: {
+        icon: '/icon.png',
+    },
 };
 
 export default function RootLayout({ children }) {
@@ -24,6 +27,18 @@ export default function RootLayout({ children }) {
                         gtag('config', 'G-KKVNZD3SQ6');
                     `}
                 </Script>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            name: "Reka Creative Labs",
+                            url: "https://rekacreativelabs.com",
+                            logo: "https://rekacreativelabs.com/icon.png"
+                        }),
+                    }}
+                />
                 {children}
             </body>
         </html>
