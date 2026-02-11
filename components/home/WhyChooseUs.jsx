@@ -5,8 +5,8 @@ import './WhyChooseUs.css';
 
 export default function WhyChooseUs() {
     const stats = [
-        { number: '200+', label: 'Happy Clients', icon: '😊' },
-        { number: '500+', label: 'Projects Completed', icon: '🚀' },
+        { number: '750+', label: 'Happy Clients', icon: '😊' },
+        { number: '1500+', label: 'Projects Completed', icon: '🚀' },
         { number: '98%', label: 'Success Rate', icon: '📈' },
         { number: '24/7', label: 'Support Available', icon: '💬' },
     ];
@@ -157,7 +157,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
                     <h3>Ready to Transform Your Business?</h3>
-                    <p>Join 200+ successful businesses that trust Reka Creative Labs</p>
+                    <p>Join 1500+ successful businesses that trust Reka Creative Labs</p>
                     <motion.a
                         href="/contact"
                         className="btn btn-primary btn-lg"
